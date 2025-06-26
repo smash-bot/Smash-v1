@@ -7,7 +7,7 @@ async function helpCommand(sock, chatId, message) {
 ╔═══════════════════╗
    *🤖 ${settings.botName || '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥'}*  
    Version: *${settings.version || '2.0.5'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
+   by ${settings.botOwner || 'Sir loft'}
    YT : ${global.ytch}
 ╚═══════════════════╝
 
