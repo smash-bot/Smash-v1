@@ -70,7 +70,7 @@ async function tiktokCommand(sock, chatId, message) {
                         await sock.sendMessage(chatId, {
                             video: { url: videoUrl },
                             mimetype: "video/mp4",
-                            caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗞𝗡𝗜𝗚𝗛𝗧-𝗕𝗢𝗧"
+                            caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥"
                         }, { quoted: message });
                         return;
                     }
@@ -96,12 +96,12 @@ async function tiktokCommand(sock, chatId, message) {
                     await sock.sendMessage(chatId, {
                         video: { url: mediaUrl },
                         mimetype: "video/mp4",
-                        caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗞𝗡𝗜𝗚𝗛𝗧-𝗕𝗢𝗧"
+                        caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥"
                     }, { quoted: message });
                 } else {
                     await sock.sendMessage(chatId, {
                         image: { url: mediaUrl },
-                        caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗞𝗡𝗜𝗚𝗛𝗧-𝗕𝗢𝗧"
+                        caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥"
                     }, { quoted: message });
                 }
             }
