@@ -8,7 +8,7 @@ async function staffCommand(sock, chatId, msg) {
         try {
             pp = await sock.profilePictureUrl(chatId, 'image');
         } catch {
-            pp = 'https://i.imgur.com/2wzGhpF.jpeg'; // Default image
+            pp ='https://files.catbox.moe/osou52.jpg'; // Default image
         }
 
         // Get admins from participants
