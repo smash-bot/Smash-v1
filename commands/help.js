@@ -27,7 +27,7 @@ async function helpCommand(sock, chatId, message) {
 *Available Commands:*
 
 ═══〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🌐 *General Commands*:
+🛡️ *𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗖𝗢𝗠𝗠𝗔𝗡𝗗* 🛡️:
 ║ 💥 .help or .menu
 ║ 💥 .ping
 ║ 💥 .alive
