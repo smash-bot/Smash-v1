@@ -169,7 +169,9 @@ async function helpCommand(sock, chatId, message) {
 ║ 🥵 .repo
 ╚═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
 
-Join our channel for updates:`;
+Massive thanks for the trust and support! 🙌  
+Powered by *Sir Loft* — the mastermind crafting next-level bots and pushing boundaries every day! 💥⚡  
+Stay tuned for more fire and endless innovation! 🔥🚀:`;
 
     try {
         const imagePath = path.join(__dirname, '../assets/bot_images.jpg');
