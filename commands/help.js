@@ -51,7 +51,7 @@ async function helpCommand(sock, chatId, message) {
 
 ╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
 ⚙️ 𝘼𝘿𝙈𝙄𝙉 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 ⚙️:
-║ 🩸 .ban @user
+║ 🩸 .loft @user
 ║ 🩸 .promote @user
 ║ 🩸 .demote @user
 ║ 🩸 .mute <minutes>
