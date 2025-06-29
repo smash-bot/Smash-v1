@@ -3,214 +3,130 @@ const fs = require('fs');
 const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
-    const helpMessage = `
+    const helpMessage = `    let str = `❤️ *_Hello ${name}, ${greeting}! Welcome to my menu!* 🥳
 ╭═══〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-┃🍑│━━━❮❮ CMD LINE ❯❯━━━━━━
-┃🍑│𝙽𝚊𝚖𝚎: I'M LOFT
-┃🍑│𝚃𝚘𝚝𝚊𝚕: 700+ Features
-┃🍑│Network:LTE
-┃🍑│ᴠᴇʀꜱɪᴏɴ: BETA
-┃🍑│ᴏᴡɴᴇʀ : Sir loft
-┃🍑│ɴᴜᴍʙᴇʀ: 255778018545
-┃🍑│HOSTER: *loft Platform*
-┃🍑│ᴍᴏᴅᴇ: *Unkown*
-┃🍑│ᴘʀᴇғɪx: *Multi-Prefix*
-┃🍑│Uptime: 18:30
-┃🍑│Today's Date: 23,10,2006
-┃🍑│Current Time: unknown 
-┃🍑│──────────●●►
-┃🍑│𝕏 https://x.com/@loft
-┃🍑│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃🍑│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃🍑│   ©*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥
+┃✰│━━━❮❮ CMD LINE ❯❯━━━━━━
+┃✰│𝙽𝚊𝚖𝚎: ${global.author}
+┃✰│𝚃𝚘𝚝𝚊𝚕: 700+ Features
+┃✰│Network:LTE
+┃✰│ᴠᴇʀꜱɪᴏɴ: BETA
+┃✰│ᴏᴡɴᴇʀ : *loft*
+┃✰│ɴᴜᴍʙᴇʀ: 254743706010
+┃✰│HOSTER: *linux Platform*
+┃✰│ᴍᴏᴅᴇ: *Unkown*
+┃✰│ᴘʀᴇғɪx: *Multi-Prefix*
+┃✰│Uptime: ${uptime}
+┃✰│Today's Date: unknown 
+┃✰│Current Time: unknown
+┃✰│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃✰│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃✰│   *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 
 ╰──────────────────
-—═ 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ═—:
+Thank you for choosing silva md
+powered by Sylivanus❤️
+─═✧✧═─ *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 ─═✧✧═─`
 
-═══〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🛡️ *𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗖𝗢𝗠𝗠𝗔𝗡𝗗* 🛡️:
-║ 💥 .help or .menu
-║ 💥 .ping
-║ 💥 .alive
-║ 💥 .tts <text>
-║ 💥 .owner
-║ 💥 .joke
-║ 💥 .quote
-║ 💥 .fact
-║ 💥 .weather <city>
-║ 💥 .news
-║ 💥 .attp <text>
-║ 💥 .lyrics <song_title>
-║ 💥 .8ball <question>
-║ 💥 .groupinfo
-║ 💥 .staff or .admins 
-║ 💥 .vv
-║ 💥 .trt <text> <lang>
-║ 💥 .ss <link>
-║ 💥 .jid
-╚═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-⚙️ 𝘼𝘿𝙈𝙄𝙉 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 ⚙️:
-║ 🩸 .loft @user
-║ 🩸 .promote @user
-║ 🩸 .demote @user
-║ 🩸 .mute <minutes>
-║ 🩸 .unmute
-║ 🩸 .delete or .del
-║ 🩸 .kick @user
-║ 🩸 .warnings @user
-║ 🩸 .warn @user
-║ 🩸 .antilink
-║ 🩸 .antibadword
-║ 🩸 .clear
-║ 🩸 .tag <message>
-║ 🩸 .tagall
-║ 🩸 .chatbot
-║ 🩸 .resetlink
-║ 🩸 .welcome <on/off>
-║ 🩸 .goodbye <on/off>
-╚═══〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-👑 𝙊𝙒𝙉𝙀𝙍 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 👑:
-║ 🌹 .mode
-║ 🌹 .autostatus
-║ 🌹 .clearsession
-║ 🌹 .antidelete
-║ 🌹 .cleartmp
-║ 🌹 .setpp <reply to image>
-║ 🌹 .autoreact
-╚════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔═══〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🎨 𝙄𝙈𝘼𝙂𝙀/𝙎𝙏𝙄𝘾𝙆𝙀𝙍 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 🎨:
-║ 💀 .blur <image>
-║ 💀 .simage <reply to sticker>
-║ 💀 .sticker <reply to image>
-║ 💀 .tgsticker <Link>
-║ 💀 .meme
-║ 💀 .take <packname> 
-║ 💀 .emojimix <emj1>+<emj2>
-╚════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍  
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🎮⚡ 𝙂𝘼𝙈𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 ⚡🎮:
-║ 🫦 .tictactoe @user
-║ 🫦 .hangman
-║ 🫦 .guess <letter>
-║ 🫦 .trivia
-║ 🫦 .answer <answer>
-║ 🫦 .truth
-║ 🫦 .dare
-╚═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-*🤖✨ 𝘼𝙄 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 ✨🤖*:
-║ 🦾 .gpt <question>
-║ 🦾 .gemini <question>
-║ 🦾 .imagine <prompt>
-║ 🦾 .flux <prompt>
-╚════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-*😂🎉 𝔉𝔲𝔫 𝔠𝔬𝔪𝔪𝔞𝔫𝔡 🎉😂*:
-║ 🤭 .compliment @user
-║ 🤭 .insult @user
-║ 🤭 .flirt 
-║ 🤭 .shayari
-║ 🤭 .goodnight
-║ 🤭 .roseday
-║ 🤭 .character @user
-║ 🤭 .wasted @user
-║ 🤭 .ship @user
-║ 🤭 .simp @user
-║ 🤭 .stupid @user [text]
-╚═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🔤 *𝙏𝙚𝙭𝙩 𝙈𝙖𝙠𝙚𝙧*:
-║ 🤬 .metallic <text>
-║ 🤬 .ice <text>
-║ 🤬 .snow <text>
-║ 🤬 .impressive <text>
-║ 🤬 .matrix <text>
-║ 🤬 .light <text>
-║ 🤬 .neon <text>
-║ 🤬 .devil <text>
-║ 🤬 .purple <text>
-║ 🤬 .thunder <text>
-║ 🤬 .leaves <text>
-║ 🤬 .1917 <text>
-║ 🤬 .arena <text>
-║ 🤬 .hacker <text>
-║ 🤬 .sand <text>
-║ 🤬 .blackpink <text>
-║ 🤬 .glitch <text>
-║ 🤬 .fire <text>
-╚════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-⏬⚡ 𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕 𝕔𝕠𝕞𝕞𝕒𝕟𝕕𝕤 ⚡⏬:
-║ 👻 .play <song_name>
-║ 👻 .song <song_name>
-║ 👻 .instagram <link>
-║ 👻 .facebook <link>
-║ 👻 .tiktok <link>
-║ 👻 .video <song name>
-║ 👻 .ytmp4 <Link>
-╚════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-╔════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-🔗📂 𝔾𝕚𝕥ℍ𝕦𝕓 𝕄𝕖𝕟𝕦 📂🔗:
-║ 🥵 .git
-║ 🥵 .github
-║ 🥵 .sc
-║ 🥵 .script
-║ 🥵 .repo
-╚═════〘 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〙═══⊷❍
-
-Massive thanks for the trust and support! 🙌  
-Powered by *Sir Loft* — the mastermind crafting next-level bots and pushing boundaries every day! 💥⚡  
-Stay tuned for more fire and endless innovation! 🔥🚀:`;
-
-    try {
-        const imagePath = path.join(__dirname, '../assets/bot_images.jpg');
-        
-        if (fs.existsSync(imagePath)) {
-            const imageBuffer = fs.readFileSync(imagePath);
-            
-            await sock.sendMessage(chatId, {
-                image: imageBuffer,
-                caption: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: 'smash',
-                        serverMessageId: -1
-                    }
-                }
-            },{ quoted: message });
-        } else {
-            console.error('Bot image not found at:', imagePath);
-            await sock.sendMessage(chatId, { 
-                text: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: 'smash',
-                        serverMessageId: -1
-                    } 
-                }
-            });
+    let msg = generateWAMessageFromContent(m.chat, {
+        viewOnceMessage: {
+            message: {
+                "messageContextInfo": {
+                    "deviceListMetadata": {},
+                    "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                    body: proto.Message.InteractiveMessage.Body.create({
+                        text: str
+                    }),
+                    footer: proto.Message.InteractiveMessage.Footer.create({
+                        text: "Use The Below Buttons"
+                    }),
+                    header: proto.Message.InteractiveMessage.Header.create({
+                        ...(await prepareWAMessageMedia({
+                            image: { url: 'https://files.catbox.moe/8324jm.jpg' }
+                        }, { upload: conn.waUploadToServer })),
+                        title: null,
+                        subtitle: null,
+                        hasMediaAttachment: false
+                    }),
+                    nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                        buttons: [
+                            {
+                                 "name": "single_select",
+                "buttonParamsJson": 
+                                "{\"title\":\"TAP TO OPEN\",\"sections\":[{\"title\":\"HERE IS ALL LIST OF MENU\",\"highlight_label\":\"SILVA TECH INC\",\"rows\":[{\"header\":\"\",\"title\":\"💀 Bot Menu\",\"description\":\"The Bot's secret control panel. What's your command, oh great one?\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"📚 Owner Menu\",\"description\":\"The sacred scroll only for the chosen one. Yep, that's you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🧑‍🤝‍🧑 Group Menu\",\"description\":\"Group shenanigans central! Unite, chat, conquer!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"📥 Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'. Come grab your goodies!\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎉 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs. Let's get this party started!\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💰 Economy Menu\",\"description\":\"Bling bling! Your personal vault of virtual economy. Spend or save? Choose wisely!\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena. May the odds be ever in your favor!\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🎨 Sticker Menu\",\"description\":\"A rainbow of stickers for your inner artist. Make your chats pop!\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🧰 Tool Menu\",\"description\":\"Your handy-dandy toolkit. What's your pick, genius?\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🎩 Logo Menu\",\"description\":\"Create a logo that screams YOU. Or whispers. You choose the volume.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🌙 NSFW Menu\",\"description\":\"The After Dark menu. But remember, sharing adult secrets must be consent-based.\",\"id\":\".nsfwmenu\"}]}]}" 
+                },
+                            {
+                                "name": "quick_reply",
+                                "buttonParamsJson": "{\"display_text\":\"Main Menu 💖☠️\",\"id\":\".main\"}"
+                            },
+                             {
+                                "name": "quick_reply",
+                                "buttonParamsJson": "{\"display_text\":\"Owner✨❤️\",\"id\":\".owner\"}"
+                            },
+                            {
+                                "name": "quick_reply",
+                                "buttonParamsJson": "{\"display_text\":\"SECOND MENU 📲\",\"id\":\".menu2\"}"
+                            },
+                            {
+                                "name": "cta_url",
+                                "buttonParamsJson": "{\"display_text\":\"BOT SC 🎉\",\"url\":\"https://github.com/SilvaTechB/silva-md-bot\",\"merchant_url\":\"https://github.com/SilvaTechB\"}"
+                            }
+                        ]
+                    })
+                })
+            }
         }
-    } catch (error) {
-        console.error('Error in help command:', error);
-        await sock.sendMessage(chatId, { text: helpMessage });
-    }
+    }, {})
+
+    // Sending audio with image and context info
+    await conn.sendMessage(m.chat, {
+        audio: { url: 'https://github.com/SilvaTechB/silva-md-bot/raw/main/media/Menu.mp3' },
+        image: { url: 'https://i.imgur.com/RDhF6iP.jpeg' }, // Change this to a dynamic thumbnail URL
+        caption: str,
+        contextInfo: {
+            mentionedJid: [m.sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363398106360290@newsletter',
+                newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
+                serverMessageId: 143
+            }
+        }
+    })
+
+    await conn.relayMessage(msg.key.remoteJid, msg.message, {
+        messageId: msg.key.id
+    })
 }
 
-module.exports = helpCommand;
+handler.help = ['main']
+handler.tags = ['group']
+handler.command = ['menu', 'help', 'h', 'commands']
+
+export default handler
+
+function clockString(ms) {
+    let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+    let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+    let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
+
+function ucapan() {
+    const time = moment.tz('Africa/Nairobi').format('HH')
+    let res = "happy early in the day☀️"
+    if (time >= 4) {
+        res = "Good Morning 🥱"
+    }
+    if (time >= 10) {
+        res = "Good Afternoon 🫠"
+    }
+    if (time >= 15) {
+        res = "Good Afternoon 🌇"
+    }
+    if (time >= 18) {
+        res = "Good Night 🌙"
+    }
+    return res
+}
