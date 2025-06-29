@@ -1,18 +1,23 @@
 const settings = require("../settings");
 async function aliveCommand(sock, chatId, message) {
     try {
-        const message1 = `**𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 is Active!*\n\n` +
-                       `*Version:* ${settings.version}\n` +
-                       `*Status:* Online\n` +
-                       `*Mode:* Public\n\n` +
-                       `*🌟 Features:*\n` +
-                       `• Group Management\n` +
-                       `• Antilink Protection\n` +
-                       `• Fun Commands\n` +
-                       `• And more!\n\n` +
-                       `Type *.menu* for full command list`;
-
-
+const message1 =
+  "```
+  "╔═══════════════════╗\n" +
+  "║   ＳＭＡＳＨ-Ｖ１  💀  ║\n" +
+  "╚═══════════════════╝\n" +
+  "   STATUS: [ ONLINE ]\n" +
+  "   MODE:   [ PUBLIC ]\n" +
+  "   VERSION: " + settings.version + "\n" +
+  "═════════════════════\n" +
+  "⚡ FEATURES ⚡\n" +
+  "-  Group Management\n" +
+  "-  Antilink Protection\n" +
+  "-  Fun Commands\n" +
+  "-  And more!\n" +
+  "═════════════════════\n" +
+  "Type *.menu* for full command list\n" +
+  "```";
 
   try {
     const message1 = `
