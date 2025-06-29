@@ -43,6 +43,7 @@ INFO:
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
 
+try {
   // Reply to the original message with the bot info
   await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
 
@@ -51,11 +52,9 @@ INFO:
 
   // Send audio from Catbox
   await sock.sendMessage(chatId, { audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, mimetype: 'audio/mp3', ptt: false });
-
 } catch (error) {
   console.error('Error in ping command:', error);
   await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
 }
 
-module.exports = pingCommand;
 
