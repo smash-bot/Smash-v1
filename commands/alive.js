@@ -19,14 +19,6 @@ const message1 =
   "Type *.menu* for full command list\n" +
   "```";
 
-  try {
-    const message1 = `
-• Antilink Protection
-• Fun Commands
-• And more!
-Type *.menu* for full command list
-`;
-
     await sock.sendMessage(chatId, {
       text: message1,
       contextInfo: {
