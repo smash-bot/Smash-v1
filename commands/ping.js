@@ -43,13 +43,20 @@ INFO:
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
 
-        // Reply to the original message with the bot info
-        await sock.sendMessage(chatId, { text: botInfo},{ quoted: message });
 
-    } catch (error) {
-        console.error('Error in ping command:', error);
-        await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
-    }
+  // Reply to the original message with the bot info
+  await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
+
+  // Send image from Catbox
+  await sock.sendMessage(chatId, { image: { url: 'https://files.catbox.moe/yourimage.jpg' }, caption: 'i'm loft' });
+
+  // Send audio from Catbox
+  await sock.sendMessage(chatId, { audio: { url: 'https://files.catbox.moe/yourmusic.mp3' }, mimetype: 'audio/mp3', ptt: false });
+
+} catch (error) {
+  console.error('Error in ping command:', error);
+  await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
 }
 
 module.exports = pingCommand;
+
