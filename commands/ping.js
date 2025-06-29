@@ -14,7 +14,6 @@ function formatTime(seconds) {
     if (hours > 0) time += `${hours}h `;
     if (minutes > 0) time += `${minutes}m `;
     if (seconds > 0 || time === '') time += `${seconds}s`;
-
     return time.trim();
 }
 
@@ -32,8 +31,8 @@ async function pingCommand(sock, chatId, message) {
 [ 🛰️ SYSTEM PING REPORT ]
 ---------------------------------
 > Status      : ONLINE ✅
-> Response    : 24 ms ⚡
-> Timestamp   : 2025-06-29 15:32:00 🗓️
+> Response    : ${ping} ms ⚡
+> Timestamp   : ${new Date().toISOString().replace('T', ' ').slice(0, 19)} 🗓️
 > Mode        : PUBLIC 🌍
 > Version     : 1.0.0 🛠️
 > Owner        : @Sir Loft 👤
@@ -43,28 +42,26 @@ INFO:
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
 
-const pingCommand = async (sock, chatId, message, botInfo) => {
-  try {
-    // Reply to the original message with the bot info
-    await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
+        // Reply to the original message with the bot info
+        await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
 
-    // Send image from Catbox
-    await sock.sendMessage(chatId, { 
-      image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, 
-      caption: 'loft' 
-    });
+        // Send image from Catbox
+        await sock.sendMessage(chatId, { 
+            image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, 
+            caption: 'loft' 
+        });
 
-    // Send audio from Catbox
-    await sock.sendMessage(chatId, { 
-      audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, 
-      mimetype: 'audio/mp3', 
-      ptt: false 
-    });
-    
-  } catch (error) {
-    console.error('Error in ping command:', error);
-    await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
-  }
-};
+        // Send audio from Catbox
+        await sock.sendMessage(chatId, { 
+            audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, 
+            mimetype: 'audio/mp3', 
+            ptt: false 
+        });
+
+    } catch (error) {
+        console.error('Error in ping command:', error);
+        await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
+    }
+}
 
 module.exports = pingCommand;
