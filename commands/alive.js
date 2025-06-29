@@ -35,7 +35,7 @@ Type *.menu* for full command list
       }
     }, { quoted: message });
 
-    // Send audio from kCatbox
+    // Send audio from Catbox
     await sock.sendMessage(chatId, {
       audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' },
       mimetype: 'audio/mpeg'
