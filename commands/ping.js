@@ -47,7 +47,7 @@ INFO:
   await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
 
   // Send image from Catbox
-  await sock.sendMessage(chatId, { image: { url: 'https://files.catbox.moe/yourimage.jpg' }, caption: 'i'm loft' });
+  await sock.sendMessage(chatId, { image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, caption: 'i'm loft' });
 
   // Send audio from Catbox
   await sock.sendMessage(chatId, { audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, mimetype: 'audio/mp3', ptt: false });
