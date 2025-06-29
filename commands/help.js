@@ -154,31 +154,34 @@ async function helpCommand(sock, chatId, message) {
 
 Join our channel for updates:`;
 
-try {
-    // Send Catbox image with caption
-    await sock.sendMessage(chatId, {
-        image: { url: 'https://files.catbox.moe/0wizqy.jpg' },
-        caption: helpMessage,
-        contextInfo: {
-            forwardingScore: 1,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363161513685998@newsletter',
-                newsletterName: 'KnightBot MD',
-                serverMessageId: -1
+async function helpCommand(sock, chatId, message, helpMessage) {
+    try {
+        // Send Catbox image with caption
+        await sock.sendMessage(chatId, {
+            image: { url: 'https://files.catbox.moe/0wizqy.jpg' },
+            caption: helpMessage,
+            contextInfo: {
+                forwardingScore: 1,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363161513685998@newsletter',
+                    newsletterName: 'KnightBot MD',
+                    serverMessageId: -1
+                }
             }
-        }
-    }, { quoted: message });
+        }, { quoted: message });
 
-    // Send Catbox audio (replace with your Catbox audio link)
-    await sock.sendMessage(chatId, {
-        audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' }, // Put your Catbox audio link here
-        mimetype: 'audio/mp4',
-        ptt: true
-    }, { quoted: message });
+        // Send Catbox audio (replace with your Catbox audio link)
+        await sock.sendMessage(chatId, {
+            audio: { url: 'https://files.catbox.moe/your_audio_file.m4a' }, // Put your Catbox audio link here
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: message });
 
-} catch (error) {
-    console.error('Error in help command:', error);
-    await sock.sendMessage(chatId, { text: helpMessage });
+    } catch (error) {
+        console.error('Error in help command:', error);
+        await sock.sendMessage(chatId, { text: helpMessage });
+    }
 }
 
+module.exports = helpCommand;
