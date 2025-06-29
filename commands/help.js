@@ -165,15 +165,15 @@ async function helpCommand(sock, chatId, message, helpMessage) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
+                    newsletterName: '*SMASH-V1* 💥',
                     serverMessageId: -1
                 }
             }
         }, { quoted: message });
 
-        // Send Catbox audio 
+        // Send Catbox audio
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' }
+            audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: message });
@@ -185,3 +185,4 @@ async function helpCommand(sock, chatId, message, helpMessage) {
 }
 
 module.exports = helpCommand;
+
