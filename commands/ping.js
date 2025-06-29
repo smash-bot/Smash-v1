@@ -62,6 +62,5 @@ try {
   console.error('Error in ping command:', error);
   await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
 }
-
 module.exports = pingCommand;
 
