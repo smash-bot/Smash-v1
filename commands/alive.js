@@ -12,22 +12,39 @@ async function aliveCommand(sock, chatId, message) {
                        `• And more!\n\n` +
                        `Type *.menu* for full command list`;
 
-        await sock.sendMessage(chatId, {
-            text: message1,
-            contextInfo: {
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398106360290@newsletter',
-                    newsletterName: 'Smash',
-                    serverMessageId: -1
-                }
-            }
-        }, { quoted: message });
-    } catch (error) {
-        console.error('Error in alive command:', error);
-        await sock.sendMessage(chatId, { text: 'Bot is alive and running!' }, { quoted: message });
-    }
-}
+
+
+  try {
+    const message1 = `
+• Antilink Protection
+• Fun Commands
+• And more!
+Type *.menu* for full command list
+`;
+
+    await sock.sendMessage(chatId, {
+      text: message1,
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363398106360290@newsletter',
+          newsletterName: 'Smash',
+          serverMessageId: -1
+        }
+      }
+    }, { quoted: message });
+
+    // Send audio from kCatbox
+    await sock.sendMessage(chatId, {
+      audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' },
+      mimetype: 'audio/mpeg'
+    }, { quoted: message });
+
+  } catch (error) {
+    console.error('Error in alive command:', error);
+    await sock.sendMessage(chatId, { text: 'Bot is alive and running!' }, { quoted: message });
+  }
+};
 
 module.exports = aliveCommand;
