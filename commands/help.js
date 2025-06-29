@@ -172,7 +172,7 @@ try {
 
     // Send Catbox audio (replace with your Catbox audio link)
     await sock.sendMessage(chatId, {
-        audio: { url: 'https://files.catbox.moe/your_audio_file.m4a' }, // Put your Catbox audio link here
+        audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' }, // Put your Catbox audio link here
         mimetype: 'audio/mp4',
         ptt: true
     }, { quoted: message });
