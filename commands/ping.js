@@ -29,11 +29,19 @@ async function pingCommand(sock, chatId, message) {
         const uptimeFormatted = formatTime(uptimeInSeconds);
 
         const botInfo = `
-┏━━〔 *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥 〕━━┓
-┃ 🚀 Ping     : ${ping} ms
-┃ ⏱️ Uptime   : ${uptimeFormatted}
-┃ 🔖 Version  : v${settings.version}
-┗━━━━━━━━━━━━━━━━━━━┛`.trim();
+[ 🛰️ SYSTEM PING REPORT ]
+---------------------------------
+> Status      : ONLINE ✅
+> Response    : 24 ms ⚡
+> Timestamp   : 2025-06-29 15:32:00 🗓️
+> Mode        : PUBLIC 🌍
+> Version     : 1.0.0 🛠️
+> Owner        : @Sir Loft 👤
+---------------------------------
+INFO:
+- Bot operational, no issues detected. 👍
+- For help: use !help or contact admin. 🆘
+----------------------------------`.trim();
 
         // Reply to the original message with the bot info
         await sock.sendMessage(chatId, { text: botInfo},{ quoted: message });
