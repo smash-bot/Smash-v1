@@ -154,53 +154,31 @@ async function helpCommand(sock, chatId, message) {
 
 Join our channel for updates:`;
 
-    try {
-        const imagePath = path.join(__dirname, '../assets/bot_image.jpg'); // Au tumia attachment yako kama unavyotaka
-
-        if (fs.existsSync(imagePath)) {
-            const imageBuffer = fs.readFileSync(imagePath);
-
-            // Tuma image na caption
-            await sock.sendMessage(chatId, {
-                image: imageBuffer,
-                caption: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD',
-                        serverMessageId: -1
-                    }
-                }
-            }, { quoted: message });
-
-            // Tuma menu audio (nyimbo)
-            await sock.sendMessage(chatId, {
-                audio: { url: 'https://github.com/criss-vevo/CRISS-DATA/raw/refs/heads/main/autovoice/menuwen.m4a' }, // Badilisha link kama unataka nyimbo nyingine
-                mimetype: 'audio/mp4',
-                ptt: true
-            }, { quoted: message });
-
-        } else {
-            console.error('Bot image not found at:', imagePath);
-            await sock.sendMessage(chatId, { 
-                text: helpMessage,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363161513685998@newsletter',
-                        newsletterName: 'KnightBot MD by Mr Unique Hacker',
-                        serverMessageId: -1
-                    } 
-                }
-            });
+try {
+    // Send Catbox image with caption
+    await sock.sendMessage(chatId, {
+        image: { url: 'https://files.catbox.moe/0wizqy.jpg' },
+        caption: helpMessage,
+        contextInfo: {
+            forwardingScore: 1,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363161513685998@newsletter',
+                newsletterName: 'KnightBot MD',
+                serverMessageId: -1
+            }
         }
-    } catch (error) {
-        console.error('Error in help command:', error);
-        await sock.sendMessage(chatId, { text: helpMessage });
-    }
+    }, { quoted: message });
+
+    // Send Catbox audio (replace with your Catbox audio link)
+    await sock.sendMessage(chatId, {
+        audio: { url: 'https://files.catbox.moe/your_audio_file.m4a' }, // Put your Catbox audio link here
+        mimetype: 'audio/mp4',
+        ptt: true
+    }, { quoted: message });
+
+} catch (error) {
+    console.error('Error in help command:', error);
+    await sock.sendMessage(chatId, { text: helpMessage });
 }
 
-module.exports = helpCommand;
