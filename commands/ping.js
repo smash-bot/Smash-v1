@@ -42,7 +42,6 @@ INFO:
 - Bot operational, no issues detected. 👍
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
-
 try {
   // Reply to the original message with the bot info
   await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
