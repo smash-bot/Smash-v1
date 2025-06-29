@@ -4,157 +4,153 @@ const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
-╔═══════════════════╗
-   *🤖 ${settings.botName || 'KnightBot-MD'}*  
-   Version: *${settings.version || '2.0.5'}*
-   by ${settings.botOwner || 'Mr Unique Hacker'}
-   YT : ${global.ytch}
-╚═══════════════════╝
+─────────────
+*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥
+─────────────
 
-*Available Commands:*
+🍑 𝙽𝚊𝚖𝚎: I'M LOFT  
+🍑 𝚃𝚘𝚝𝚊𝚕: 700+ Features  
+🍑 Network: LTE  
+🍑 ᴠᴇʀꜱɪᴏɴ: BETA  
+🍑 ᴏᴡɴᴇʀ: Sir loft  
+🍑 ɴᴜᴍʙᴇʀ: 255778018545  
+🍑 HOSTER: loft Platform  
+🍑 ᴍᴏᴅᴇ: Unkown  
+🍑 ᴘʀᴇғɪx: Multi-Prefix  
+🍑 Uptime: 18:30  
+🍑 Today's Date: 23,10,2006  
+🍑 Current Time: unknown  
+🍑 𝕏 https://x.com/@loft  
+─────────────
 
-╔═══════════════════╗
-🌐 *General Commands*:
-║ ➤ .help or .menu
-║ ➤ .ping
-║ ➤ .alive
-║ ➤ .tts <text>
-║ ➤ .owner
-║ ➤ .joke
-║ ➤ .quote
-║ ➤ .fact
-║ ➤ .weather <city>
-║ ➤ .news
-║ ➤ .attp <text>
-║ ➤ .lyrics <song_title>
-║ ➤ .8ball <question>
-║ ➤ .groupinfo
-║ ➤ .staff or .admins 
-║ ➤ .vv
-║ ➤ .trt <text> <lang>
-║ ➤ .ss <link>
-║ ➤ .jid
-╚═══════════════════╝ 
+—𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀—  
 
-╔═══════════════════╗
-👮‍♂️ *Admin Commands*:
-║ ➤ .ban @user
-║ ➤ .promote @user
-║ ➤ .demote @user
-║ ➤ .mute <minutes>
-║ ➤ .unmute
-║ ➤ .delete or .del
-║ ➤ .kick @user
-║ ➤ .warnings @user
-║ ➤ .warn @user
-║ ➤ .antilink
-║ ➤ .antibadword
-║ ➤ .clear
-║ ➤ .tag <message>
-║ ➤ .tagall
-║ ➤ .chatbot
-║ ➤ .resetlink
-║ ➤ .welcome <on/off>
-║ ➤ .goodbye <on/off>
-╚═══════════════════╝
+🛡️ GENERAL COMMAND 🛡️  
+💥 .help or .menu  
+💥 .ping  
+💥 .alive  
+💥 .tts <text>  
+💥 .owner  
+💥 .joke  
+💥 .quote  
+💥 .fact  
+💥 .weather <city>  
+💥 .news  
+💥 .attp <text>  
+💥 .lyrics <song_title>  
+💥 .8ball <question>  
+💥 .groupinfo  
+💥 .staff or .admins  
+💥 .vv  
+💥 .trt <text> <lang>  
+💥 .ss <link>  
+💥 .jid  
 
-╔═══════════════════╗
-🔒 *Owner Commands*:
-║ ➤ .mode
-║ ➤ .autostatus
-║ ➤ .clearsession
-║ ➤ .antidelete
-║ ➤ .cleartmp
-║ ➤ .setpp <reply to image>
-║ ➤ .autoreact
-╚═══════════════════╝
+⚙️ ADMIN COMMANDS ⚙️  
+🩸 .loft @user  
+🩸 .promote @user  
+🩸 .demote @user  
+🩸 .mute <minutes>  
+🩸 .unmute  
+🩸 .delete or .del  
+🩸 .kick @user  
+🩸 .warnings @user  
+🩸 .warn @user  
+🩸 .antilink  
+🩸 .antibadword  
+🩸 .clear  
+🩸 .tag <message>  
+🩸 .tagall  
+🩸 .chatbot  
+🩸 .resetlink  
+🩸 .welcome <on/off>  
+🩸 .goodbye <on/off>  
 
-╔═══════════════════╗
-🎨 *Image/Sticker Commands*:
-║ ➤ .blur <image>
-║ ➤ .simage <reply to sticker>
-║ ➤ .sticker <reply to image>
-║ ➤ .tgsticker <Link>
-║ ➤ .meme
-║ ➤ .take <packname> 
-║ ➤ .emojimix <emj1>+<emj2>
-╚═══════════════════╝  
+👑 OWNER COMMANDS 👑  
+🌹 .mode  
+🌹 .autostatus  
+🌹 .clearsession  
+🌹 .antidelete  
+🌹 .cleartmp  
+🌹 .setpp <reply to image>  
+🌹 .autoreact  
 
-╔═══════════════════╗
-🎮 *Game Commands*:
-║ ➤ .tictactoe @user
-║ ➤ .hangman
-║ ➤ .guess <letter>
-║ ➤ .trivia
-║ ➤ .answer <answer>
-║ ➤ .truth
-║ ➤ .dare
-╚═══════════════════╝
+🎨 IMAGE/STICKER COMMANDS 🎨  
+💀 .blur <image>  
+💀 .simage <reply to sticker>  
+💀 .sticker <reply to image>  
+💀 .tgsticker <Link>  
+💀 .meme  
+💀 .take <packname>  
+💀 .emojimix <emj1>+<emj2>  
 
-╔═══════════════════╗
-🤖 *AI Commands*:
-║ ➤ .gpt <question>
-║ ➤ .gemini <question>
-║ ➤ .imagine <prompt>
-║ ➤ .flux <prompt>
-╚═══════════════════╝
+🎮⚡ GAME COMMAND ⚡🎮  
+🫦 .tictactoe @user  
+🫦 .hangman  
+🫦 .guess <letter>  
+🫦 .trivia  
+🫦 .answer <answer>  
+🫦 .truth  
+🫦 .dare  
 
-╔═══════════════════╗
-🎯 *Fun Commands*:
-║ ➤ .compliment @user
-║ ➤ .insult @user
-║ ➤ .flirt 
-║ ➤ .shayari
-║ ➤ .goodnight
-║ ➤ .roseday
-║ ➤ .character @user
-║ ➤ .wasted @user
-║ ➤ .ship @user
-║ ➤ .simp @user
-║ ➤ .stupid @user [text]
-╚═══════════════════╝
+🤖✨ AI COMMAND ✨🤖  
+🦾 .gpt <question>  
+🦾 .gemini <question>  
+🦾 .imagine <prompt>  
+🦾 .flux <prompt>  
 
-╔═══════════════════╗
-🔤 *Textmaker*:
-║ ➤ .metallic <text>
-║ ➤ .ice <text>
-║ ➤ .snow <text>
-║ ➤ .impressive <text>
-║ ➤ .matrix <text>
-║ ➤ .light <text>
-║ ➤ .neon <text>
-║ ➤ .devil <text>
-║ ➤ .purple <text>
-║ ➤ .thunder <text>
-║ ➤ .leaves <text>
-║ ➤ .1917 <text>
-║ ➤ .arena <text>
-║ ➤ .hacker <text>
-║ ➤ .sand <text>
-║ ➤ .blackpink <text>
-║ ➤ .glitch <text>
-║ ➤ .fire <text>
-╚═══════════════════╝
+😂🎉 Fun command 🎉😂  
+🤭 .compliment @user  
+🤭 .insult @user  
+🤭 .flirt  
+🤭 .shayari  
+🤭 .goodnight  
+🤭 .roseday  
+🤭 .character @user  
+🤭 .wasted @user  
+🤭 .ship @user  
+🤭 .simp @user  
+🤭 .stupid @user [text]  
 
-╔═══════════════════╗
-📥 *Downloader*:
-║ ➤ .play <song_name>
-║ ➤ .song <song_name>
-║ ➤ .instagram <link>
-║ ➤ .facebook <link>
-║ ➤ .tiktok <link>
-║ ➤ .video <song name>
-║ ➤ .ytmp4 <Link>
-╚═══════════════════╝
+🔤 Text Maker:  
+🤬 .metallic <text>  
+🤬 .ice <text>  
+🤬 .snow <text>  
+🤬 .impressive <text>  
+🤬 .matrix <text>  
+🤬 .light <text>  
+🤬 .neon <text>  
+🤬 .devil <text>  
+🤬 .purple <text>  
+🤬 .thunder <text>  
+🤬 .leaves <text>  
+🤬 .1917 <text>  
+🤬 .arena <text>  
+🤬 .hacker <text>  
+🤬 .sand <text>  
+🤬 .blackpink <text>  
+🤬 .glitch <text>  
+🤬 .fire <text>  
 
-╔═══════════════════╗
-💻 *Github Commands:*
-║ ➤ .git
-║ ➤ .github
-║ ➤ .sc
-║ ➤ .script
-║ ➤ .repo
-╚═══════════════════╝
+⏬⚡ Download commands ⚡⏬  
+👻 .play <song_name>  
+👻 .song <song_name>  
+👻 .instagram <link>  
+👻 .facebook <link>  
+👻 .tiktok <link>  
+👻 .video <song name>  
+👻 .ytmp4 <Link>  
+
+🔗📂 GitHub Menu 📂🔗  
+🥵 .git  
+🥵 .github  
+🥵 .sc  
+🥵 .script  
+🥵 .repo  
+
+─────────────
+*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥
+─────────────
 
 Join our channel for updates:`;
 
