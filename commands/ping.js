@@ -43,7 +43,6 @@ INFO:
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
 
-
   // Reply to the original message with the bot info
   await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
 
