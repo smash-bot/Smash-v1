@@ -154,7 +154,6 @@ async function helpCommand(sock, chatId, message) {
 
 Join our channel for updates:`;
 
-async function helpCommand(sock, chatId, message, helpMessage) {
     try {
         // Send Catbox image with caption
         await sock.sendMessage(chatId, {
