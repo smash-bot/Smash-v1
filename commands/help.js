@@ -165,15 +165,15 @@ async function helpCommand(sock, chatId, message, helpMessage) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363161513685998@newsletter',
-                    newsletterName: 'KnightBot MD',
+                    newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
                     serverMessageId: -1
                 }
             }
         }, { quoted: message });
 
-        // Send Catbox audio (replace with your Catbox audio link)
+        // Send Catbox audio 
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/your_audio_file.m4a' }, // Put your Catbox audio link here
+            audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' }
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: message });
