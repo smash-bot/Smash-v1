@@ -1,7 +1,7 @@
 const settings = require("../settings");
 async function aliveCommand(sock, chatId, message) {
     try {
-const message1 = `
+        const message1 = `
 ╔═══════════════════╗
 ║   SMASH-V1  💀    ║
 ╚═══════════════════╝
@@ -18,29 +18,36 @@ VERSION: ${settings.version}
 Type *.menu* for full command list
 `;
 
-    await sock.sendMessage(chatId, {
-      text: message1,
-      contextInfo: {
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363398106360290@newsletter',
-          newsletterName: 'Smash',
-          serverMessageId: -1
-        }
-      }
-    }, { quoted: message });
+        // Send text message
+        await sock.sendMessage(chatId, {
+            text: message1,
+            contextInfo: {
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363398106360290@newsletter',
+                    newsletterName: 'Smash',
+                    serverMessageId: -1
+                }
+            }
+        }, { quoted: message });
 
-    // Send audio from Catbox
-    await sock.sendMessage(chatId, {
-      audio: { url:'https://files.catbox.moe/s7hcy1.m4a' },
-      mimetype: 'audio/mpeg'
-    }, { quoted: message });
+        // Send image
+        await sock.sendMessage(chatId, {
+            image: { url: 'https://files.catbox.moe/v2r8dg.jpg' },
+            caption: 'SMASH-V1 Bot Image'
+        }, { quoted: message });
 
-  } catch (error) {
-    console.error('Error in alive command:', error);
-    await sock.sendMessage(chatId, { text: 'Bot is alive and running!' }, { quoted: message });
-  }
+        // Send audio
+        await sock.sendMessage(chatId, {
+            audio: { url:'https://files.catbox.moe/s7hcy1.m4a' },
+            mimetype: 'audio/mpeg'
+        }, { quoted: message });
+
+    } catch (error) {
+        console.error('Error in alive command:', error);
+        await sock.sendMessage(chatId, { text: 'Bot is alive and running!' }, { quoted: message });
+    }
 };
 
 module.exports = aliveCommand;
