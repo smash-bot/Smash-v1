@@ -157,7 +157,7 @@ Join our channel for updates:`;
     try {
         // Send Catbox image with caption
         await sock.sendMessage(chatId, {
-            image: { url: 'https://files.catbox.moe/0wizqy.jpg' },
+            image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
             caption: helpMessage,
             contextInfo: {
                 forwardingScore: 1,
