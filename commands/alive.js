@@ -33,7 +33,7 @@ Type *.menu* for full command list
 
     // Send audio from Catbox
     await sock.sendMessage(chatId, {
-      audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' },
+      audio: { url:'https://files.catbox.moe/s7hcy1.m4a' },
       mimetype: 'audio/mpeg'
     }, { quoted: message });
 
