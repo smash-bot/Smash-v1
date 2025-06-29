@@ -50,7 +50,7 @@ INFO:
   await sock.sendMessage(chatId, { image: { url: 'https://files.catbox.moe/yourimage.jpg' }, caption: 'i'm loft' });
 
   // Send audio from Catbox
-  await sock.sendMessage(chatId, { audio: { url: 'https://files.catbox.moe/yourmusic.mp3' }, mimetype: 'audio/mp3', ptt: false });
+  await sock.sendMessage(chatId, { audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, mimetype: 'audio/mp3', ptt: false });
 
 } catch (error) {
   console.error('Error in ping command:', error);
