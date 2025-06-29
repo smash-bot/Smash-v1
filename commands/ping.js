@@ -42,25 +42,23 @@ INFO:
 - Bot operational, no issues detected. 👍
 - For help: use !help or contact admin. 🆘
 ----------------------------------`.trim();
-try {
-  // Reply to the original message with the bot info
-  await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
+  try {
+    await sock.sendMessage(chatId, { text: botInfo }, { quoted: message });
 
-  // Send image from Catbox
-  await sock.sendMessage(chatId, { 
-    image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, 
-    caption: 'loft' 
-  });
+    await sock.sendMessage(chatId, { 
+      image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, 
+      caption: 'loft' 
+    });
 
-  // Send audio from Catbox
-  await sock.sendMessage(chatId, { 
-    audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, 
-    mimetype: 'audio/mp3', 
-    ptt: false 
-  });
-} catch (error) {
-  console.error('Error in ping command:', error);
-  await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
-}
+    await sock.sendMessage(chatId, { 
+      audio: { url: 'https://files.catbox.moe/s7hcy1.m4a' }, 
+      mimetype: 'audio/mp3', 
+      ptt: false 
+    });
+  } catch (error) {
+    console.error('Error in ping command:', error);
+    await sock.sendMessage(chatId, { text: '❌ Failed to get bot status.' });
+  }
+};
+
 module.exports = pingCommand;
-
