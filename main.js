@@ -95,10 +95,9 @@ const { rosedayCommand } = require('./commands/roseday');
 const imagineCommand = require('./commands/imagine');
 const videoCommand = require('./commands/video');
 const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
-const { loftmenuCommand, handleLoftButton } = require('./commands/loft');
-const { loftmenuCommand, handleLoftpayButton } = require('./commands/loftpay');
-const { loftmenuCommand, handleLoftquetesButton } = require('./commands/loftquetes');
-
+const { loftCommand, handleLoftButton } = require('./commands/loft');
+const { loftpayCommand, handleLoftpayButton } = require('./commands/loftpay');
+const { loftquetesCommand, handleLoftquetesButton } = require('./commands/loftquetes');
 
 // Global settings
 global.packname = settings.packname;
