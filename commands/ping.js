@@ -48,7 +48,7 @@ INFO:
         // Send image from Catbox
         await sock.sendMessage(chatId, { 
             image: { url: 'https://files.catbox.moe/v2r8dg.jpg' }, 
-            caption: 'loft' 
+            caption: '> 😓 sometimes,when one person is missing,the whole world seems empty💔' 
         });
 
         // Send audio from Catbox
