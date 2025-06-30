@@ -3,7 +3,7 @@ async function aliveCommand(sock, chatId, message) {
     try {
         const message1 = `
 ╔═══════════════════╗
-║   SMASH-V1  💀    ║
+║   SMASH-V1  😒💔    ║
 ╚═══════════════════╝
 STATUS: [ ONLINE ]
 MODE:   [ PUBLIC ]
