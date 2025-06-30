@@ -146,12 +146,6 @@ async function helpCommand(sock, chatId, message) {
 > 🩸 .sc  
 > 🩸 .script  
 > 🩸 .repo  
->  
-> 🐛 CREATOR  🐛
-> 🩸 .loftpay
-> 🩸 .loft
-> 🩸 .loftquotes
-> 🩸 .loftmenu
 > ─────────────  
 > *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥  
 > ─────────────
