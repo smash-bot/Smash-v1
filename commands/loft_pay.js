@@ -4,7 +4,7 @@ const path = require('path');
 const axios from ('axios')
 
 let handler = async function (m, { conn, __dirname }) {
-  const githubRepoURL = 'https://github.com/smashv23/smast'
+  const githubRepoURL = 'https://github.com/smashv23/smart'
 
   try {
     const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/)
