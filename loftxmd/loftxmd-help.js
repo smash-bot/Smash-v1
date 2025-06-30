@@ -157,7 +157,11 @@ async function helpCommand(sock, chatId, message) {
 > *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥  
 > ─────────────
 
-Join our channel for updates:`;
+> Sir Loft says: Real love is when you feel at home in someone’s heart. 
+-----------------------------------------
+
+> Love is not about how many days, months, or years you’ve been together, but how much you love each other every day. 
+----------------------------------:`;
 
     try {
         // Send Catbox image with caption
