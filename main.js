@@ -96,7 +96,7 @@ const imagineCommand = require('./commands/imagine');
 const videoCommand = require('./commands/video');
 const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
 const { loftCommand, handleLoftButton } = require('./commands/loft');
-const { loftpayCommand, handleLoftpayButton } = require('./commands/loftpay');
+const { loftpayCommand, handleLoftpayButton } = require('./commands/loft_pay');
 const { loftquetesCommand, handleLoftquetesButton } = require('./commands/loftquetes');
 
 // Global settings
