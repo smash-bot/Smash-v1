@@ -47,7 +47,7 @@ async function helpCommand(sock, chatId, message) {
 > 🩸 .jid  
 >   
 > ⚙️ ADMIN COMMANDS ⚙️  
-> 🩸 .loft @user  
+> 🩸 .ban @user  
 > 🩸 .promote @user  
 > 🩸 .demote @user  
 > 🩸 .mute <minutes>  
