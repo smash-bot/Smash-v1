@@ -147,17 +147,11 @@ async function helpCommand(sock, chatId, message) {
 > 🩸 .sc  
 > 🩸 .script  
 > 🩸 .repo  
->  
-> 🐛 CREATOR  🐛
-> 🩸 .loftpay
-> 🩸 .loft
-> 🩸 .loftquotes
-> 🩸 .loftmenu
 > ─────────────  
 > *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥  
 > ─────────────
 
-Join our channel for updates:`;
+> Don't depend too much on anyone in this world because even your own shadow leaves you when you are in darkness."* 😔:`;
 
     try {
         // Send Catbox image with caption
