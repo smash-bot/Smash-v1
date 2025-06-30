@@ -35,7 +35,7 @@ Type *.menu* for full command list
         // Send image
         await sock.sendMessage(chatId, {
             image: { url: 'https://files.catbox.moe/v2r8dg.jpg' },
-            caption: 'SMASH-V1 Bot Image'
+            caption: '> 💔The pain of loving you is like a dark cloud, 😓always hanging over me, never allowing me to see the sunshine 😔'
         }, { quoted: message });
 
         // Send audio
