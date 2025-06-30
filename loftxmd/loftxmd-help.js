@@ -177,7 +177,7 @@ Join our channel for updates:`;
 
         // Send Catbox audio
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/b950x8.mp3' },
+            audio: { url: 'https://files.catbox.moe/ohnx8v.mp3' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: message });
