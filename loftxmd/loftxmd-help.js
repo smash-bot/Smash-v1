@@ -4,10 +4,13 @@ const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
     const helpMessage = `
+Weka vivuli
 > ─────────────  
 > *𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥  
 > ─────────────  
->   
+>     (\____/)(\____/)  
+>     (- ‿- )  (- ‿- )  
+>      /    \   /   \  
 > 🩸 𝙽𝚊𝚖𝚎: I'M LOFT  
 > 🩸 𝚃𝚘𝚝𝚊𝚕: 700+ Features  
 > 🩸 Network: LTE  
