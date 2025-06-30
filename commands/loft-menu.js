@@ -15,3 +15,4 @@ Bonyeza button chini kupata huduma 👇
         ],
         footer: "SMASH-V1 💥 | Powered by Loft"
     }, { quoted: message });
+}
