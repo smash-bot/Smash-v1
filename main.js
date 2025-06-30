@@ -95,6 +95,10 @@ const { rosedayCommand } = require('./commands/roseday');
 const imagineCommand = require('./commands/imagine');
 const videoCommand = require('./commands/video');
 const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
+const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
+const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
+const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
+const { loftmenuCommand, handleLoftMenuButton } = require('./commands/loftmenu');
 
 
 // Global settings
