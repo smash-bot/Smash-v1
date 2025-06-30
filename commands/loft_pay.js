@@ -1,7 +1,7 @@
 const settings = require('../settings');
 const fs = require('fs');
 const path = require('path');
-const axios from ('axios')
+const axios from 'axios'
 
 let handler = async function (m, { conn, __dirname }) {
   const githubRepoURL = 'https://github.com/smashv23/smart'
