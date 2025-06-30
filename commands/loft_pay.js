@@ -1,27 +1,63 @@
 const settings = require('../settings');
 const fs = require('fs');
 const path = require('path');
+const axios from ('axios')
 
-async function payCommand(sock, chatId, message) {
-    await sock.sendMessage(chatId, {
-        text: "*PAYMENT MENU*\n\nSelect the amount you want to pay 👇\n\n*Pay to: 255778018545 (Loft)*",
-        buttons: [
-            { buttonId: 'pay_1', buttonText: { displayText: "$1" }, type: 1 },
-            { buttonId: 'pay_2', buttonText: { displayText: "$2" }, type: 1 },
-            { buttonId: 'pay_3', buttonText: { displayText: "$3" }, type: 1 },
-            { buttonId: 'pay_4', buttonText: { displayText: "$4" }, type: 1 },
-            { buttonId: 'pay_5', buttonText: { displayText: "$5" }, type: 1 }
-        ],
-        footer: "SMASH-V1 💥 | Pay to 255778018545"
-    }, { quoted: message });
+let handler = async function (m, { conn, __dirname }) {
+  const githubRepoURL = 'https://github.com/smashv23/smast'
+
+  try {
+    const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/)
+
+    const response = await axios.get(`https://api.github.com/repos/${username}/${repoName}`)
+
+    if (response.status === 200) {
+      const repoData = response.data
+
+      // Format the repository information with emojis
+      const formattedInfo = `
+      SMASH-V1 ☣
+SMASH WANTS MONEY FROM YOU
+
+MAKE YOUR PAYMENT EXCLUSIVELY FOR SMASH BOT PROJECT
+
+\`\`\`𝐒MASH-V1 𝐁𝐎𝐓 PAYMENT\`\`\`
+`.trim()
+
+      // Send the formatted information as a message
+      await conn.relayMessage(
+        m.chat,
+        {
+          requestPaymentMessage: {
+            currencyCodeIso4217: 'KSH',
+            amount1000: 2500,
+            requestFrom: m.sender,
+            noteMessage: {
+              extendedTextMessage: {
+                text: formattedInfo,
+                contextInfo: {
+                  externalAdReply: {
+                    showAdAttribution: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+        {}
+      )
+    } else {
+      // Handle the case where the API request fails
+      await conn.reply(m.chat, 'Unable to fetch repository information.', m)
+    }
+  } catch (error) {
+    console.error(error)
+    await conn.reply(m.chat, 'An error occurred while fetching repository information.', m)
+  }
 }
 
-// Handle button replies
-async function handlePayButton(sock, chatId, buttonId, message) {
-    let amount = buttonId.replace('pay_', '');
-    await sock.sendMessage(chatId, {
-        text: `Please send $${amount} to 255778018545 (Loft) for your bot creation.`
-    }, { quoted: message });
-}
+handler.help = ['script']
+handler.tags = ['main']
+handler.command = ['pay', 'money', 'lipa']
 
-module.exports = { payCommand, handlePayButton };
+export default handler
