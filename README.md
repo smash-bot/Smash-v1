@@ -35,7 +35,7 @@
 
 <div align="center" style="margin-top:10px;">
   <a href="https://knight-bot-paircode.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-808080?style=for-the-badge" alt="Generate Pair Code" width="350" />
+    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-808080?style=for-the-badge" alt="Generate Pair Code" width="300" />
   </a>
 </div>
 
@@ -55,7 +55,7 @@
 
 <div align="center">
   <a href="https://files.catbox.moe/yourfilename.zip">
-    <img src="https://img.shields.io/badge/Download%20ZIP-808080?style=for-the-badge&logo=archive&logoColor=white" width="350" />
+    <img src="https://img.shields.io/badge/Download%20ZIP-808080?style=for-the-badge&logo=archive&logoColor=white" width="300" />
   </a>
 </div>
 
@@ -66,7 +66,7 @@
 
 <div align="center">
   <a href="https://www.youtube.com/@keithkeizzah">
-    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="350" />
+    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="300" />
   </a>
 </div>
 
@@ -77,7 +77,7 @@
 
 <div align="center">
   <a href="https://bot-hosting.net/?aff=1068419752923508776">
-    <img src="https://img.shields.io/badge/Deploy%20on%20Panel-808080?style=for-the-badge&logo=vercel&logoColor=white" width="350" />
+    <img src="https://img.shields.io/badge/Deploy%20on%20Panel-808080?style=for-the-badge&logo=vercel&logoColor=white" width="300" />
   </a>
 </div>
 
@@ -85,7 +85,7 @@
 
 <div align="center">
   <a href="https://katabump.com/account/yourusername">
-    <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="350" />
+    <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="300" />
   </a>
 </div>
 
