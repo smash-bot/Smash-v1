@@ -68,8 +68,11 @@
     <img src="https://img.shields.io/badge/Katabump-808080?style=for-the-badge&logo=server&logoColor=white" alt="Katabump" width="250"/>
   </a>
 </div>
-----------------------------
-##  🛠️ Setup & Installation
+
+<br>
+
+------------------------
+###   🛠️ Setup & Installation
 
 ###  Prerequisites
 
