@@ -13,7 +13,7 @@
 </div>
 
 <div align="center">
-  <a href="https://github.com/mruniquehacker/Knightbot-MD/fork">
+  <a href="https://github.com/smash-bot/smash-v1/fork">
     <img src="https://img.shields.io/badge/Fork-Repository-lightgrey?style=for-the-badge&logo=github&logoColor=black&labelColor=gray&color=white&glowColor=gray" alt="Fork the repository" width="350"/>
   </a>
 </div>
