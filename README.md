@@ -102,3 +102,5 @@
 
 <br>
 
+##  ❤️*Supporters I Love You*❤️
+[![Stargazers repo roster for @smash-bot/smash-v1](http://reporoster.com/stars/dark/smash-bot/smash-v1)](https://github.com/smash-bot/smash-v1/stargazers)
