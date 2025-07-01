@@ -4,7 +4,11 @@
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
 
-###   HAVE TWO WAYS TO DEPLOY THAT BOT THE FIRST IS FOR PAIR SESSION AND THE SECOND IS FOR EDIT SETTING FILE AND DEPLOY 
+###  There are two ways to deploy this bot:
+
+1. *Using Pair Session* – Generate and upload your `creds.json` file (WhatsApp session) to start the bot quickly.
+2. *Manual Setup* – Edit the configuration files (like `settings.js`) and deploy with your custom preferences.
+
 
 
 ### 🩸 Step 1: Snatch This Repo  
