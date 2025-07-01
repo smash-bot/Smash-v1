@@ -43,17 +43,13 @@
   </a>
 </div>
 
-
-
-###   🎥 This video gives a quick overview on how to deploy the bot — Perfect for beginners! ✅
-
+<br>
 
 <div align="center">
-  <a href="https://www.youtube.com/@keithkeizzah">
-    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="250" />
-  </a>
+  <img src="https://files.catbox.moe/a3x04e.png" alt="SMASH-V1 Banner" width="100%" />
 </div>
 
+<br>
 
 ### 🩸 Deploy Now
 
@@ -72,13 +68,6 @@
     <img src="https://img.shields.io/badge/Katabump-808080?style=for-the-badge&logo=server&logoColor=white" alt="Katabump" width="250"/>
   </a>
 </div>
-
-<br>
-
-<div align="center">
-  <img src="https://files.catbox.moe/a3x04e.png" alt="SMASH-V1 Banner" width="100%" />
-</div>
-
 ----------------------------
 ##  🛠️ Setup & Installation
 
