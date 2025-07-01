@@ -73,6 +73,12 @@
   </a>
 </div>
 
+<br>
+
+<div align="center">
+  <img src="https://files.catbox.moe/mq2tjw.png" alt="SMASH-V1 Banner" width="100%" />
+</div>
+
 ----------------------------
 ##  🛠️ Setup & Installation
 
