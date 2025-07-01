@@ -51,20 +51,6 @@
 
 
 
-<div align="center">
-  <a href="https://files.catbox.moe/yourfilename.zip">
-    <img src="https://img.shields.io/badge/Download%20ZIP-808080?style=for-the-badge&logo=archive&logoColor=white" width="350" />
-  </a>
-</div>
-
-
-
-<td align="center" style="border:none">
-  <a href="https://www.youtube.com/@keithkeizzah">
-    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=gray" width="350">
-  </a>
-</td>
-
 
 
 <div align="center">
