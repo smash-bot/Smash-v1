@@ -68,7 +68,7 @@
 <br>
 
 ------------------------
-###   🛠️ Setup & Installation
+##   *🛠️ Setup & Installation*
 
 ###  Prerequisites
 
