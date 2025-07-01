@@ -6,7 +6,7 @@ const path = require('path');
 
 async function githubCommand(sock, chatId, message) {
   try {
-    const res = await fetch('https://api.github.com/repos/smash-bot/smash-v1');
+    const res = await fetch('https://api.github.com/repos/smash-bot/Smash-v1');
     if (!res.ok) throw new Error('Error fetching repository data');
     const json = await res.json();
 
