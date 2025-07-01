@@ -4,7 +4,7 @@
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
 
-## 🩸 Step 1: Snatch This Repo  
+### 🩸 Step 1: Snatch This Repo  
 🩸 Take it now & launch your bot empire!  
 🩸 Ready, set, deploy!  
 
@@ -18,6 +18,13 @@
     <img src="https://img.shields.io/badge/Fork-Repository-lightgrey?style=for-the-badge&logo=github&logoColor=black&labelColor=gray&color=white&glowColor=gray" alt="Fork the repository" width="350" />
   </a>
 </div>
+
+
+### 🩸Step 2: Get Pair Code
+
+🩸Deploy the bot and easily connect it to your WhatsApp account by pair code. Click the button 
+
+
 
 <div align="center" style="margin-top:10px;">
   <a href="https://knight-bot-paircode.onrender.com" target="_blank">
