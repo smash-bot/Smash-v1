@@ -2,7 +2,6 @@
 
 
 <div align="center">
-  <a href="https://github.com/your-repo-link">
+  <a href="https://github.com/smash-bot/smash-v1">
     <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=FF0080&center=true&width=910&height=100&lines=🤖+SMASH-V1+IS+HERE;🔥+POWERFUL+WHATSAPP+BOT;💻+PROGRAMMED+BY+SIR+LOFT" alt="Typing SVG" />
   </a>
-</div>
