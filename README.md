@@ -45,7 +45,7 @@
 
 
 
-###   🎥 This video gives a quick overview on how to deploy the bot — from getting your `creds.json` to setting everything up. Perfect for beginners! ✅
+###   🎥 This video gives a quick overview on how to deploy the bot — Perfect for beginners! ✅
 
 
 <div align="center">
