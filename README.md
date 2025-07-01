@@ -1,4 +1,4 @@
-<div align="center" style="font-size: 300000px; font-weight: 900; color: #1E90FF; font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 2px 2px 4px #000000;">
+<div align="center" style="font-size: 300000px; font-weight: 999; color: #1E90FF; font-family: 'Arial Black', Gadget, sans-serif; text-shadow: 99px 99px 99px #000000;">
   SMASH-V1
 </div>
 
