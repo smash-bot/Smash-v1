@@ -109,8 +109,8 @@ async function stickerCommand(sock, chatId, message) {
         // Create metadata
         const json = {
             'sticker-pack-id': crypto.randomBytes(32).toString('hex'),
-            'sticker-pack-name': settings.packname || 'KnightBot',
-            'emojis': ['🤖']
+            'sticker-pack-name': settings.packname || 'loft',
+            'emojis': ['🩸']
         };
 
         // Create exif buffer
