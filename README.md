@@ -66,7 +66,7 @@
 
 <div align="center">
   <a href="https://www.youtube.com/@keithkeizzah">
-    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="300" />
+    <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="250" />
   </a>
 </div>
 
@@ -77,7 +77,7 @@
 
 <div align="center">
   <a href="https://bot-hosting.net/?aff=1068419752923508776">
-    <img src="https://img.shields.io/badge/Deploy%20on%20Panel-808080?style=for-the-badge&logo=vercel&logoColor=white" width="300" />
+    <img src="https://img.shields.io/badge/Deploy%20on%20Panel-808080?style=for-the-badge&logo=vercel&logoColor=white" width="250" />
   </a>
 </div>
 
@@ -85,7 +85,7 @@
 
 <div align="center">
   <a href="https://katabump.com/account/yourusername">
-    <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="300" />
+    <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="250" />
   </a>
 </div>
 
