@@ -4,7 +4,7 @@
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
 
-#### HAVE TWO WAYS TO DEPLOY THAT BOT
+###   HAVE TWO WAYS TO DEPLOY THAT BOT
 
 
 ### 🩸 Step 1: Snatch This Repo  
