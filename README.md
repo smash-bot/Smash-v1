@@ -102,13 +102,3 @@
 
 <br>
 
-<div align="center">
-  <img src="LINK_YA_PIC1" width="80" style="margin-right:10px" />
-  <img src="LINK_YA_PIC2" width="80" style="margin-right:10px" />
-  <img src="LINK_YA_PIC3" width="80" style="margin-right:10px" />
-  <img src="LINK_YA_PIC4" width="80" style="margin-right:10px" />
-  <img src="LINK_YA_PIC5" width="80" />
-</div>
-```
-
- 
