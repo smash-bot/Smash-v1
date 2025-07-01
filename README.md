@@ -100,8 +100,15 @@
 
     Once the bot starts, a QR code will appear in the terminal. Scan this QR code using the Linked Devices feature in WhatsApp to connect your WhatsApp account with the bot.
 
+<br>
 
-<div align="right">
-  <img src="https://files.catbox.moe/fwoxv5.jpg" width="80"/>
+<div align="center">
+  <img src="LINK_YA_PIC1" width="80" style="margin-right:10px" />
+  <img src="LINK_YA_PIC2" width="80" style="margin-right:10px" />
+  <img src="LINK_YA_PIC3" width="80" style="margin-right:10px" />
+  <img src="LINK_YA_PIC4" width="80" style="margin-right:10px" />
+  <img src="LINK_YA_PIC5" width="80" />
 </div>
+```
+
  
