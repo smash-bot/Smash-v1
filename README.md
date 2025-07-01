@@ -68,7 +68,7 @@
 <br>
 
 <div align="center">
-  <a href="https://katabump.com/account/yourusername">
+  <a href="https://katabump.com/account/loft">
     <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="250" />
   </a>
 </div>
