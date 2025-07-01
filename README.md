@@ -44,7 +44,12 @@
 ### 🩸After getting creds.json file, upload it to session folder
 
 
-###  ⬇️ Download ZIP to get ready for deployment!
+
+
+###  🩸 Download ZIP to get ready for deployment!
+
+
+
 
 <div align="center">
   <a href="https://files.catbox.moe/yourfilename.zip">
