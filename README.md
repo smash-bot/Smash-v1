@@ -88,3 +88,37 @@
     <img src="https://img.shields.io/badge/Deploy%20on%20Katabump-808080?style=for-the-badge&logo=google-cloud&logoColor=white" width="350" />
   </a>
 </div>
+
+<br>
+
+##  🛠️ Setup & Installation
+
+###  Prerequisites
+
+- Node.js installed on your system
+- Git installed (for cloning the repository)
+
+###  Step-by-Step Setup
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/smash-bot/smash-v1.git
+    cd SMASH-V1
+    ```
+
+2. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Run the bot:**
+
+    ```bash
+    node index.js
+    ```
+
+4. **Scan the QR code:**
+
+    Once the bot starts, a QR code will appear in the terminal. Scan this QR code using the Linked Devices feature in WhatsApp to connect your WhatsApp account with the bot.
