@@ -61,6 +61,9 @@
 
 
 
+###   🎥 This video gives a quick overview on how to deploy the bot — from getting your `creds.json` to setting everything up. Perfect for beginners! ✅
+
+
 <div align="center">
   <a href="https://www.youtube.com/@keithkeizzah">
     <img src="https://img.shields.io/badge/Video_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" width="350" />
