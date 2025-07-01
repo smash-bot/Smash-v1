@@ -4,7 +4,10 @@
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
 
-## Snatch this repo
+## ⚡ Step 1: Snatch This Repo  
+🔥 Take it now & launch your bot empire!  
+🌟 Ready, set, deploy!  
+
 
 
 </div>
