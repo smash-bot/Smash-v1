@@ -1,3 +1,2 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=3000&pause=700&color=808080&center=true&vCenter=true&width=1000&height=80&lines=🤖+SMASH-V1+BOT;⚡+POWERFUL+BOT+SYSTEM;🔥+POWERED+BY+SIR+LOFT;💥+NEXT+GEN+WHATSAPP+BOT" alt="Typing SVG" />
-</p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=3000&pause=700&color=808080&center=true&vCenter=true&width=1000&height=80&lines=🤖+SMASH-V1+BOT;⚡+POWERFUL+BOT+SYSTEM;🔥+POWERED+BY+SIR+LOFT;💥+NEXT+GEN+WHATSAPP+BOT" alt="
