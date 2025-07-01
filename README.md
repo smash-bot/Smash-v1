@@ -3,6 +3,7 @@
 
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
+</div>
 
 <div align="center">
   <a href="https://github.com/mruniquehacker/Knightbot-MD/fork">
