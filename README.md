@@ -12,15 +12,15 @@
 
 </div>
 
+
 <div align="center">
   <a href="https://github.com/smash-bot/smash-v1/fork">
-    <img src="https://img.shields.io/badge/Fork-Repository-lightgrey?style=for-the-badge&logo=github&logoColor=black&labelColor=gray&color=white&glowColor=gray" alt="Fork the repository" width="350"/>
+    <img src="https://img.shields.io/badge/Fork-Repository-lightgrey?style=for-the-badge&logo=github&logoColor=black&labelColor=gray&color=white&glowColor=gray" alt="Fork the repository" width="350" />
   </a>
 </div>
 
-
-<div align="center">
+<div align="center" style="margin-top:10px;">
   <a href="https://knight-bot-paircode.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-808080?style=for-the-badge" alt="Generate Pair Code" />
+    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-808080?style=for-the-badge" alt="Generate Pair Code" width="350" />
   </a>
 </div>
