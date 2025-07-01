@@ -91,6 +91,7 @@
 
 <br>
 
+----------------------------
 ##  🛠️ Setup & Installation
 
 ###  Prerequisites
