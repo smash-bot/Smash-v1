@@ -27,22 +27,6 @@
 </div>
 
 
-### 🩸Step 2: Get Pair Code
-
-🩸Deploy the bot and easily connect it to your WhatsApp account by pair code. Click the button 
-
-
-
-<div align="center" style="margin-top:10px;">
-  <a href="https://knight-bot-paircode.onrender.com" target="_blank">
-    <img src="https://img.shields.io/badge/GET%20PAIR%20CODE-Easy%20Method-808080?style=for-the-badge" alt="Generate Pair Code" width="300" />
-  </a>
-</div>
-
-
-
-### 🩸After getting creds.json file, upload it to session folder
-
 
 
 
