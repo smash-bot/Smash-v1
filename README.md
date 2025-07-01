@@ -6,7 +6,7 @@
 
 
 
-### 🩸 Step 1: Snatch This Repo  
+### 🩸*Step 1: Snatch This Repo* 
 🩸 Take it now & launch your bot empire!  
 🩸 Ready, set, deploy!  
 
@@ -25,7 +25,7 @@
 
 
 
-###  🩸Step 2: Download ZIP to get ready for deployment!
+##  🩸 *Step 2: Download ZIP to get ready for deployment!*
 
 
 
