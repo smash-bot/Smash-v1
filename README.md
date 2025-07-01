@@ -81,8 +81,7 @@
   </a>
 </div>
 
-</div>
-
+<br>
 
 <div align="center">
   <a href="https://katabump.com/account/yourusername">
