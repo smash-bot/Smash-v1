@@ -4,9 +4,4 @@
 ![SMASH-V1](https://files.catbox.moe/fwoxv5.jpg)
 
 
-*HTML:*
-```html
-<img src="https://files.catbox.moe/fwoxv5.jpg" alt="SMASH-V1" width="600"/>
-```
 
-Unaweza kubadilisha `width` kama unataka ipungue au iongezeke.
