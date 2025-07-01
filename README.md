@@ -7,7 +7,7 @@
 ###  There are two ways to deploy this bot:
 
 1. *Using Pair Session* – Generate and upload your `creds.json` file (WhatsApp session) to start the bot quickly.
-2. *Manual Setup* – Edit the configuration files ( `settings.js`) and deploy with your custom preferences.
+2. *Manual Setup* – Edit the configuration files (`settings.js`) and deploy with your custom preferences.
 
 
 
