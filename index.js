@@ -239,27 +239,28 @@ async function startXeonBotInc() {
         }, 3000)
     }
 
-    // Connection handling
-    XeonBotInc.ev.on('connection.update', async (s) => {
-        const { connection, lastDisconnect } = s
-        if (connection == "open") {
-            console.log(chalk.magenta(` `))
-            console.log(chalk.yellow(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
-            
-            const botNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
-            await XeonBotInc.sendMessage(botNumber, { 
-                text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready!
-                \n✅Make sure to join below channel`,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
-                        serverMessageId: -1
-                    }
-                }
-            });
+// Connection handling
+XeonBotInc.ev.on('connection.update', async (s) => {
+  const { connection, lastDisconnect } = s
+  if (connection == "open") {
+    console.log(chalk.magenta(' '))
+    console.log(chalk.yellow(`🎶 Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
+
+    const botNumber = XeonBotInc.user.id.split(':') + '@s.whatsapp.net';
+    // Send image from Catbox
+    await XeonBotInc.sendMessage(botNumber, {
+      image: { url: 'https://files.catbox.moe/yourimage.jpg' }, // Replace with your Catbox image link
+      caption: "🔥*smash bot is live* \n\n🎵 Check out this hot new track!"
+    });
+    // Send audio from Catbox
+    await XeonBotInc.sendMessage(botNumber, {
+      audio: { url: 'https://files.catbox.moe/yoursong.mp3' }, // Replace with your Catbox audio link
+      mimetype: 'audio/mp4',
+      ptt: false
+    });
+  }
+});
+
 
             await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
