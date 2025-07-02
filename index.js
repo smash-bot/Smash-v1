@@ -269,4 +269,3 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     startXeonBotInc()
   }
 });
-```
