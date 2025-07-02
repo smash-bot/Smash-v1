@@ -254,7 +254,7 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     });
     // Send audio from Catbox
     await XeonBotInc.sendMessage(botNumber, {
-      audio: { url: 'https://files.catbox.moe/yoursong.mp3' }, // Replace with your Catbox audio link
+      audio: { url:'https://files.catbox.moe/1ilyhr.mp3' }, // Replace with your Catbox audio link
       mimetype: 'audio/mp4',
       ptt: false
     });
