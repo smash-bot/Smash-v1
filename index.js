@@ -239,88 +239,33 @@ async function startXeonBotInc() {
         }, 3000)
     }
 
-    // Connection handling
-    XeonBotInc.ev.on('connection.update', async (s) => {
-        const { connection, lastDisconnect } = s
-        if (connection == "open") {
-            console.log(chalk.magenta(` `))
-            console.log(chalk.yellow(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
-
-            const botNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
-            await XeonBotInc.sendMessage(botNumber, { 
-                text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready!
-                \n✅Make sure to join below channel`,
-                contextInfo: {
-                    forwardingScore: 1,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363398106360290@newsletter',
-                        newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
-                        serverMessageId: -1
-                    }
-                }
-            });
-
-            await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
-            console.log(chalk.cyan(`< ================================================== >`))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT HACKER`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: MR UNIQUE HACKER`))
-            console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
-        }
-        if (
-            connection === "close" &&
-            lastDisconnect &&
-            lastDisconnect.error &&
-            lastDisconnect.error.output.statusCode != 401
-        ) {
-            startXeonBotInc()
-        }
-    })
-
-    XeonBotInc.ev.on('creds.update', saveCreds)
-
-    XeonBotInc.ev.on('group-participants.update', async (update) => {
-        await handleGroupParticipantUpdate(XeonBotInc, update);
+// Connection handling
+XeonBotInc.ev.on('connection.update', async (s) => {
+  const { connection, lastDisconnect } = s
+  if (connection == "open") {
+    console.log(chalk.magenta(` `))
+    console.log(chalk.yellow(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
+    const botNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
+    await XeonBotInc.sendMessage(botNumber, { 
+      audio: { 
+        url: 'https:                               
+      }, 
+      mimetype: '//files.catbox.moe/1ilyhr.mp3' 
+      }, 
+      mimetype: 'audio/mp4', 
+      ptt: false 
     });
-
-    XeonBotInc.ev.on('messages.upsert', async (m) => {
-        if (m.messages[0].key && m.messages[0].key.remoteJid === 'status@broadcast') {
-            await handleStatus(XeonBotInc, m);
-        }
-    });
-
-    XeonBotInc.ev.on('status.update', async (status) => {
-        await handleStatus(XeonBotInc, status);
-    });
-
-    XeonBotInc.ev.on('messages.reaction', async (status) => {
-        await handleStatus(XeonBotInc, status);
-    });
-
-    return XeonBotInc
-}
-
-
-// Start the bot with error handling
-startXeonBotInc().catch(error => {
-    console.error('Fatal error:', error)
-    process.exit(1)
-})
-process.on('uncaughtException', (err) => {
-    console.error('Uncaught Exception:', err)
-})
-
-process.on('unhandledRejection', (err) => {
-    console.error('Unhandled Rejection:', err)
-})
-
-let file = require.resolve(__filename)
-fs.watchFile(file, () => {
-    fs.unwatchFile(file)
-    console.log(chalk.redBright(`Update ${__filename}`))
-    delete require.cache[file]
-    require(file)
+    await XeonBotInc.sendMessage(botNumber, { text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready! \n✅Make sure to join below channel`, contextInfo: { forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363398106360290@newsletter', newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥', serverMessageId: -1 } } });
+    await delay(1999)
+    console.log(chalk.yellow(`\n\n ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
+    console.log(chalk.cyan(`< ================================================== >`))
+    console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT HACKER`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: MR UNIQUE HACKER`))
+    console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
+  }
+  if ( connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401 ) {
+    startXeonBotInc()
+  }
 })
