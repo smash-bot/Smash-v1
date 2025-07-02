@@ -250,27 +250,28 @@ async function startXeonBotInc() {
             await XeonBotInc.sendMessage(botNumber, { 
                 text: `Connected Successfully!\n\n🩸 Time: ${new Date().toLocaleString()}\n🩸 Status: Online and Ready!
                 \n🩸Make sure to join below channel`,
-               // Send the image first
-await XeonBotInc.sendMessage(botNumber, { 
-  image: { url: "https://files.catbox.moe/raudmw.jpg" },
-  caption: "Here is your image!",
-  contextInfo: {
-    forwardingScore: 1,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363398106360290@newsletter',
-      newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
-      serverMessageId: -1
-    }
-  }
-});
+  try {
+        // Send Catbox image with caption
+        await sock.sendMessage(chatId, {
+            image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
+            caption: helpMessage,
+            contextInfo: {
+                forwardingScore: 1,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363398106360290@newsletter',
+                    newsletterName: '*SMASH-V1* 💥',
+                    serverMessageId: -1
+                }
+            }
+        }, { quoted: message });
 
-// Then send the song (audio)
-await XeonBotInc.sendMessage(botNumber, { 
-  audio: { url: "https://files.catbox.moe/1ilyhr.mp3" },
-  mimetype: "audio/mp4",
-  ptt: false
-});
+        // Send Catbox audio
+        await sock.sendMessage(chatId, {
+            audio: { url: 'https://files.catbox.moe/b950x8.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: message });
 
             await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
