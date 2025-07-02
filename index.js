@@ -150,27 +150,23 @@ async function startXeonBotInc() {
                 if (mek.key && mek.key.remoteJid) {
                     await XeonBotInc.sendMessage(mek.key.remoteJid, { 
                         text: '❌ An error occurred while processing your message.',
-// Send the image first
-await XeonBotInc.sendMessage(botNumber, { 
-  image: { url: "https://files.catbox.moe/raudmw.jpg" },
-  caption: "Here is your image!",
-  contextInfo: {
-    forwardingScore: 1,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: "120068908060@newsletter",
-      newsletterName: "*SMASH-V1* 💥",
-      serverMessageId: -1
-    }
-  }
-});
+                        contextInfo: {
+                            forwardingScore: 1,
+                            isForwarded: true,
+                            forwardedNewsletterMessageInfo: {
+                                newsletterJid: '120363398106360290@newsletter',
+                                newsletterName: 'SMASH-V1',
+                                serverMessageId: -1
+                            }
+                        }
+                    }).catch(console.error);
+                }
+            }
+        } catch (err) {
+            console.error("Error in messages.upsert:", err)
+        }
+    })
 
-// Then send the song (audio)
-await XeonBotInc.sendMessage(botNumber, { 
-  audio: { url: "https://files.catbox.moe/1ilyhr.mp3" },
-  mimetype: "audio/mp4",
-  ptt: false
-});
     // Add these event handlers for better functionality
     XeonBotInc.decodeJid = (jid) => {
         if (!jid) return jid
