@@ -250,20 +250,20 @@ XeonBotInc.ev.on('connection.update', async (s) => {
       audio: { 
         url: 'https:                               
       }, 
-      mimetype: '//files.catbox.moe/1ilyhr.mp3' 
+      mimetype: '//https://files.catbox.moe/1ilyhr.mp3' 
       }, 
       mimetype: 'audio/mp4', 
       ptt: false 
     });
-    await XeonBotInc.sendMessage(botNumber, { text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready! \n✅Make sure to join below channel`, contextInfo: { forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363398106360290@newsletter', newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥', serverMessageId: -1 } } });
+    await XeonBotInc.sendMessage(botNumber, { text: `🤖 Bot Connected Successfully!\n\n🩸 Time: ${new Date().toLocaleString()}\n🩸 Status: Online and Ready! \n🩸Make sure to join below channel`, contextInfo: { forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363398106360290@newsletter', newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥', serverMessageId: -1 } } });
     await delay(1999)
     console.log(chalk.yellow(`\n\n ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
     console.log(chalk.cyan(`< ================================================== >`))
-    console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT HACKER`))
+    console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT`))
     console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
     console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-    console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: MR UNIQUE HACKER`))
-    console.log(chalk.green(`${global.themeemoji || '•'} 🤖 Bot Connected Successfully! ✅`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: SIR LOFT`))
+    console.log(chalk.green(`${global.themeemoji || '•'} Connected Successfully! ✅`))
   }
   if ( connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401 ) {
     startXeonBotInc()
