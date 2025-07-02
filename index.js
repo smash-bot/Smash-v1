@@ -248,21 +248,11 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     console.log(chalk.yellow(`Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
     const botNumber = XeonBotInc.user.id;
     await XeonBotInc.sendMessage(botNumber, { 
-      image: { 
-        url: 'https:                               
-      }, 
+      image: { url: 'https://files.catbox.moe/rai8mw.jpg' }, 
       caption: "*smash bot is live* \n\n Check out this hot new track!" 
     });
     await XeonBotInc.sendMessage(botNumber, { 
-      audio: { 
-        url: '//files.catbox.moe/rai8mw.jpg' 
-      }, 
-      caption: "*smash bot is live* \n\n Check out this hot new track!" 
-    });
-    await XeonBotInc.sendMessage(botNumber, { 
-      audio: { 
-        url: 'https://files.catbox.moe/1ilyhr.mp3' 
-      }, 
+      audio: { url: 'https://files.catbox.moe/1ilyhr.mp3' }, 
       mimetype: 'audio/mp4', 
       ptt: false 
     });
@@ -279,3 +269,4 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     startXeonBotInc()
   }
 });
+```
