@@ -250,8 +250,6 @@ async function startXeonBotInc() {
             await XeonBotInc.sendMessage(botNumber, { 
                 text: `Connected Successfully!\n\n🩸 Time: ${new Date().toLocaleString()}\n🩸 Status: Online and Ready!
                 \n🩸Make sure to join below channel`,
-  try {
-        // Send Catbox image with caption
         await sock.sendMessage(chatId, {
             image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
             caption: helpMessage,
