@@ -249,51 +249,34 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     const botNumber = XeonBotInc.user.id.split(':') + '@s.whatsapp.net';
     // Send image from Catbox
     await XeonBotInc.sendMessage(botNumber, {
-      image: { url: 'https://files.catbox.moe/rai8mw.jpg' }, // Replace with your Catbox image link
+      image: { url: 'https://files.catbox.moe/rai8mw.jpg' },
       caption: "🔥*smash bot is live* \n\n🎵 Check out this hot new track!"
     });
     // Send audio from Catbox
     await XeonBotInc.sendMessage(botNumber, {
-      audio: { url:'https://files.catbox.moe/1ilyhr.mp3' }, // Replace with your Catbox audio link
+      audio: { url:'https://files.catbox.moe/1ilyhr.mp3' },
       mimetype: 'audio/mp4',
       ptt: false
     });
+
+    await delay(1999)
+    console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
+    console.log(chalk.cyan(`< ================================================== >`))
+    console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
+    console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: LOFT CREATOR`))
+    console.log(chalk.green(`${global.themeemoji || '•'} Connected Successfully! ✅`))
   }
-});
-
-
-            await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
-            console.log(chalk.cyan(`< ================================================== >`))
-            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: LOFT CREATOR`))
-            console.log(chalk.green(`${global.themeemoji || '•'} Connected Successfully! ✅`))
-        }
-        if (
-            connection === "close" &&
-            lastDisconnect &&
-            lastDisconnect.error &&
-            lastDisconnect.error.output.statusCode != 401
-        ) {
-            startXeonBotInc()
-        }
-    
-
-    XeonBotInc.ev.on('creds.update', saveCreds)
-    
-    XeonBotInc.ev.on('group-participants.update', async (update) => {
-        await handleGroupParticipantUpdate(XeonBotInc, update);
-    });
-
-    XeonBotInc.ev.on('messages.upsert', async (m) => {
-        if (m.messages[0].key && m.messages[0].key.remoteJid === 'status@broadcast') {
-            await handleStatus(XeonBotInc, m);
-        }
-    });
-
-    XeonBotInc.ev.on('status.update', async (status) => {
+  if (
+    connection === "close" &&
+    lastDisconnect &&
+    lastDisconnect.error &&
+    lastDisconnect.error.output.statusCode != 401
+  ) {
+    startXeonBotInc()
+  }
+}); // <-- Hapa inafunga XeonBotInc.ev.on('connection.update', async (status) => {
         await handleStatus(XeonBotInc, status);
     });
 
