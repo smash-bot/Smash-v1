@@ -286,8 +286,6 @@ XeonBotInc.ev.on('connection.update', async (s) => {
 
     return XeonBotInc
 
-
-
 // Start the bot with error handling
 startXeonBotInc().catch(error => {
     console.error('Fatal error:', error)
