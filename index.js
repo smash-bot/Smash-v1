@@ -249,7 +249,7 @@ XeonBotInc.ev.on('connection.update', async (s) => {
     const botNumber = XeonBotInc.user.id.split(':') + '@s.whatsapp.net';
     // Send image from Catbox
     await XeonBotInc.sendMessage(botNumber, {
-      image: { url: 'https://files.catbox.moe/yourimage.jpg' }, // Replace with your Catbox image link
+      image: { url: 'https://files.catbox.moe/rai8mw.jpg' }, // Replace with your Catbox image link
       caption: "🔥*smash bot is live* \n\n🎵 Check out this hot new track!"
     });
     // Send audio from Catbox
