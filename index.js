@@ -279,7 +279,7 @@ XeonBotInc.ev.on('connection.update', async (s) => {
         ) {
             startXeonBotInc()
         }
-    })
+    )
 
     XeonBotInc.ev.on('creds.update', saveCreds)
     
