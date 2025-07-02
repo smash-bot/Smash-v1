@@ -108,6 +108,6 @@
 
 <p align="center">
 
-<a href="https://wa.me/254778018545">
+<a href="https://wa.me/255778018545">
   <img src="https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png" alt="WhatsApp Owner"/>
 </a>
