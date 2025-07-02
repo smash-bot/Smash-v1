@@ -152,7 +152,7 @@ async function startXeonBotInc() {
                         text: '❌ An error occurred while processing your message.',
 // Tuma picha kwanza
 await XeonBotInc.sendMessage(botNumber, { 
-  image: { url: 'https://ppl-ai-file-upload.s3.amazonaws.com/ask-perplexity/whatsapp_uploads/255778018545/5f37d231-dfad-4c8f-8946-7ec14ea55e5d/3a41d1e8-c357-4051-9251-0f44f7e38b4c.jpg' }, 
+  image: { url: 'https://files.catbox.moe/rai8mw.jpg' }, 
   caption: 'Hii hapa picha yako!', 
   contextInfo: {
     forwardingScore: 1,
