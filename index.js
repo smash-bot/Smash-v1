@@ -285,11 +285,10 @@ async function startXeonBotInc() {
         console.log(chalk.green(`${global.themeemoji || '•'}  Connected Successfully! ✅`))
     }
     if (
-        connection === "close" &&
-        lastDisconnect &&
-        lastDisconnect.error &&
-        lastDisconnect.error.output.statusCode != 401
-    ) {
-        startXeonBotInc()
-    }
+    connection === "close" &&
+    lastDisconnect &&
+    lastDisconnect.error &&
+    lastDisconnect.error.output.statusCode != 401
+) {
+    startXeonBotInc()
 }
