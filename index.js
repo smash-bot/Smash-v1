@@ -291,4 +291,3 @@ async function startXeonBotInc() {
     lastDisconnect.error.output.statusCode != 401
 ) {
     startXeonBotInc()
-}
