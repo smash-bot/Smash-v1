@@ -241,56 +241,42 @@ async function startXeonBotInc() {
 
     // Connection handling
     XeonBotInc.ev.on('connection.update', async (s) => {
-    const { connection, lastDisconnect } = s
-    if (connection == "open") {
-        console.log(chalk.magenta(` `))
-        console.log(chalk.yellow(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
+        const { connection, lastDisconnect } = s
+        if (connection == "open") {
+            console.log(chalk.magenta(` `))
+            console.log(chalk.yellow(`🌿Connected to => ` + JSON.stringify(XeonBotInc.user, null, 2)))
 
-        const botNumber = XeonBotInc.user.id.split(':') + '@s.whatsapp.net';
-
-        // Welcome message
-        await XeonBotInc.sendMessage(botNumber, { 
-            text: `Connected Successfully!\n\n🩸 Time: ${new Date().toLocaleString()}\n🩸 Status: Online and Ready!\n🩸Make sure to join below channel`
-        });
-
-        // Send Catbox image
-        await XeonBotInc.sendMessage(botNumber, {
-            image: { url: 'https://files.catbox.moe/fwoxv5.jpg' },
-            caption: helpMessage, // hakikisha helpMessage imedefinishwa juu
-            contextInfo: {
-                forwardingScore: 1,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398106360290@newsletter',
-                    newsletterName: '*SMASH-V1* 💥',
-                    serverMessageId: -1
+            const botNumber = XeonBotInc.user.id.split(':')[0] + '@s.whatsapp.net';
+            await XeonBotInc.sendMessage(botNumber, { 
+                text: `🩸 Connected Successfully!\n\n🩸 Time: ${new Date().toLocaleString()}\n🩸 Status: Online and Ready!
+                \n🩸Make sure to join below channel`,
+                contextInfo: {
+                    forwardingScore: 1,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363398106360290@newsletter',
+                        newsletterName: '*𝐒𝐌𝐀𝐒𝐇-𝐕𝟏* 💥',
+                        serverMessageId: -1
+                    }
                 }
-            }
-        });
+            });
 
-        // Send Catbox audio
-        await XeonBotInc.sendMessage(botNumber, {
-            audio: { url: 'https://files.catbox.moe/b950x8.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: true
-        });
-
-        await delay(1999)
-        console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
-        console.log(chalk.cyan(`< ================================================== >`))
-        console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT `))
-        console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
-        console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
-        console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: SIR LOFT`))
-        console.log(chalk.green(`${global.themeemoji || '•'}  Connected Successfully! ✅`))
-    }
-    if (
-    connection === "close" &&
-    lastDisconnect &&
-    lastDisconnect.error &&
-    lastDisconnect.error.output.statusCode != 401
-) {
-    startXeonBotInc()
+            await delay(1999)
+            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'SMASH-V1'} ]`)}\n\n`))
+            console.log(chalk.cyan(`< ================================================== >`))
+            console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL: SIR LOFT `))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: mrunqiuehacker`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} WA NUMBER: ${owner}`))
+            console.log(chalk.magenta(`${global.themeemoji || '•'} CREDIT: SIR LOFT`))
+            console.log(chalk.green(`${global.themeemoji || '•'}  Connected Successfully! ✅`))
+        }
+        if (
+            connection === "close" &&
+            lastDisconnect &&
+            lastDisconnect.error &&
+            lastDisconnect.error.output.statusCode != 401
+        ) {
+            startXeonBotInc()
         }
     })
 
