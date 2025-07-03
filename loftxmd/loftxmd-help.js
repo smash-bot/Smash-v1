@@ -190,5 +190,3 @@ ENJOY YOUR JOURNEY 😄:`;
 
 module.exports = helpCommand;
 
-Command;
-
