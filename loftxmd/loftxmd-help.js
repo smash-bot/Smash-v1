@@ -162,7 +162,7 @@ ENJOY YOUR JOURNEY 😄:`;
     try {
         // Send Catbox image with caption
         await sock.sendMessage(chatId, {
-            image: { url:'https://files.catbox.moe/fwoxv5.jpg' },
+            image: { url:'https://fastupload.io/f0f3b67449dab474' },
             caption: helpMessage,
             contextInfo: {
                 forwardingScore: 1,
