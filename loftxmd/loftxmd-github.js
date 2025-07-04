@@ -26,7 +26,6 @@ async function githubCommand(sock, chatId, message) {
     txt += `*Stars*: ${json.stargazers_count}\n`;
 
     const imageUrl = 'https://raw.githubusercontent.com/smash-bot/Smash-v1/main/assets/Loft.jpeg';
-
     await sock.sendMessage(chatId, { image: { url: imageUrl }, caption: txt }, { quoted: message });
   } catch (error) {
     await sock.sendMessage(chatId, { text: '❌ Error fetching repository information.' }, { quoted: message });
