@@ -177,7 +177,7 @@ ENJOY YOUR JOURNEY 😄:`;
 
         // Send Catbox audio
         await sock.sendMessage(chatId, {
-            audio: { url: 'https://files.catbox.moe/ohnx8v.mp3' },
+            audio: { url: 'https://fastupload.io/76d868b82be9649a' },
             mimetype: 'audio/mp4',
             ptt: true
         }, { quoted: message });
