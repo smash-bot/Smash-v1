@@ -160,36 +160,30 @@ async function helpCommand(sock, chatId, message) {
 ENJOY YOUR JOURNEY 😄:`;
 
     try {
-    // Send image with caption
-    await sock.sendMessage(chatId, {
-        image: { url: 'https://raw.githubusercontent.com/smash-bot/Smash-v1/main/assets/Loft.jpeg' },
-        caption: helpMessage,
-        contextInfo: {
-            forwardingScore: 1,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363398106360290@newsletter',
-                newsletterName: '*SMASH-V1* 💥',
-                serverMessageId: -1
+        // Send image with caption
+        await sock.sendMessage(chatId, {
+            image: { url: 'https://raw.githubusercontent.com/smash-bot/Smash-v1/main/assets/Loft.jpeg' },
+            caption: helpMessage,
+            contextInfo: {
+                forwardingScore: 1,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363398106360290@newsletter',
+                    newsletterName: '*SMASH-V1* 💥',
+                    serverMessageId: -1
+                }
             }
-        }
-    }, { quoted: message });
+        }, { quoted: message });
 
-    // Send audio
-    await sock.sendMessage(chatId, {
-        audio: { url: 'https://raw.githubusercontent.com/smash-bot/Smash-v1/main/assets/loft.mp3' },
-        mimetype: 'audio/mp4',
-        ptt: true
-    }, { quoted: message });
+        // Send audio
+        await sock.sendMessage(chatId, {
+            audio: { url: 'https://raw.githubusercontent.com/smash-bot/Smash-v1/main/assets/loft.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: message });
 
-} catch (error) {
-    console.error('Error in help command:', error);
-    await sock.sendMessage(chatId, { text: helpMessage });
-}
-
-module.exports = helpCommand;
-
-, error);
+    } catch (error) {
+        console.error('Error in help command:', error);
         await sock.sendMessage(chatId, { text: helpMessage });
     }
 }
