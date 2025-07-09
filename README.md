@@ -40,12 +40,12 @@
 
 <br>
 
-##  🩸 *EDIT THIS FILE ONLY*
 <div align="center">
-  <img src="https://files.catbox.moe/a3x04e.png" alt="SMASH-V1 Banner" width="100%" />
+  <a href="https://your-video-link.com">
+    <img src="https://img.shields.io/badge/Watch-Video-red?style=for-the-badge&logo=youtube&logoColor=white&labelColor=red&color=red" alt="Watch Video" width="300" />
+  </a>
 </div>
 
-<br>
 
 ## 🩸  *Step:3 Deploy Now*
 
